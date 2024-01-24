@@ -1,0 +1,7 @@
+<div class="row" *ngFor="let task of tasks">
+    <div class="col-xs-12">
+        {{task.title}}  {{task.description}}
+        <button class="btn btn-success m-1" (click)="markAsCompleted(task.id)" [disabled]="task.completed">Mark Completed</button>
+        <button class="btn btn-success m-1"(click)="deleteTask(task.id)">Delete</button>
+    </div>
+</div>
